@@ -1,6 +1,7 @@
 const fs = require('fs')
+const path = require('path')
 
-fs.appendFile('./app-4/text.txt', 'Hello world', (err)=>{
+fs.appendFile(path.join(__dirname, "text.txt"), 'Hello world', (err)=>{
   err === true ? console.log(err) : console.log('success')
 })
 
